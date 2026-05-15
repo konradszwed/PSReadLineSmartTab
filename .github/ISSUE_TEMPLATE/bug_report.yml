@@ -1,0 +1,59 @@
+name: Bug report
+description: Report unexpected PSReadLineSmartTab behavior
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Provide the shortest command sequence that reproduces the issue.
+      placeholder: |
+        1. Import-Module PSReadLineSmartTab
+        2. Enable-PSReadLineSmartTab
+        3. Type ...
+        4. Press Tab
+    validations:
+      required: true
+
+  - type: input
+    id: powershell
+    attributes:
+      label: PowerShell version
+      placeholder: "7.6.1"
+    validations:
+      required: false
+
+  - type: input
+    id: psreadline
+    attributes:
+      label: PSReadLine version
+      placeholder: "2.x"
+    validations:
+      required: false
+
+  - type: textarea
+    id: keyhandlers
+    attributes:
+      label: Relevant key handler output
+      description: Paste `Get-PSReadLineKeyHandler -Chord Tab` output if useful.
+      render: powershell
+    validations:
+      required: false
