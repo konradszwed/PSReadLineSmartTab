@@ -1,0 +1,2 @@
+Import-Module PSReadLineSmartTab
+Enable-PSReadLineSmartTab -CompletionMode MenuComplete
